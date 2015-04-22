@@ -48,28 +48,20 @@ def test( str ):
 
 	simpleSQL = selectStmt
 
-	# define Oracle comment format, and ignore them
 	oracleSqlComment = "--" + restOfLine
 	simpleSQL.ignore( oracleSqlComment )
 
-	#print str,"->"
+	
 	try:
 		tokens = simpleSQL.parseString( str )
-		a=tokens.asDict()
+		#a=tokens.asDict()
 		#print a['tables'][0]
-		print a['where'][0][1]
+		#print a['where'][0][1]
 		return tokens.asDict()
 		#return tokens
-		'''
-		print "tokens = ",        tokens
-		print "tokens.columns =", tokens.columns
-		print "tokens.tables =",  tokens.tables
-		print "tokens.where =", tokens.where
-		'''
+		
 	except ParseException, err:
-		print " "*err.loc + "^\n" + err.msg
-		print err
 		return err
 	print
 
-test("select Title from foo where age>40")
+#test("select Title from foo where age>40")
