@@ -7,13 +7,15 @@ import parse
  
 def clientthread(conn):
     
-    conn.send('Welcome to the server. Type the query and hit enter\n') 
-    #l = []
+    conn.send('Welcome to the server. \nEnter the file name\n') 
+    filename = conn.recv(1024)
+    conn.send('\nEnter the file path with name(eg.:- /home/actor.csv)\n')  
+    filepath = conn.recv(1024)
     while True:
-        cr = csv.reader(open("/home/sujay/Desktop/actor.csv","rb"))
+        cr = csv.reader(open(filepath,"rb"))
         data = conn.recv(1024)
         tokens = parse.test(data)
-	print tokens
+	tokens.tables[0][0]==
 	'''
 	for row in cr:
 		reply = row[0]+"\t"+row[1]+"\t"+row[2]+"\n"

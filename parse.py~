@@ -57,7 +57,7 @@ def test( str ):
 		tokens = simpleSQL.parseString( str )
 		a=tokens.asDict()
 		#print a['tables'][0]
-		#print a['where'][0][1]
+		print a['where'][0][1]
 		return tokens.asDict()
 		#return tokens
 		'''
