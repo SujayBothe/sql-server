@@ -100,7 +100,7 @@ def clientthread(conn):
 HOST = ''  
 PORT = int(input("Enter the port no.-"))
 filename = str(input('Enter the file name(eg.:- \'actors\')\n'))
-filepath = str(input('Enter the file path(eg.:- \'\home\Desktop\actors.csv\')\n')) 
+filepath = str(input('Enter the file path(eg.:- \'/home/Desktop/actors.csv\')\n')) 
  
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print 'Socket created'
