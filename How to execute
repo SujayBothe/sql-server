@@ -1,0 +1,10 @@
+How to run the project :-
+
+1) open terminal
+2) run server.py
+	a) provide the port number
+	b) provide the name of file in single quotes without extension (eg.:- 'actors')
+	c) provide path to the csv file in single quotes(eg.:- '\home\Desktop\actors.csv')
+3)open another terminal
+4)telnet localhost <port no>
+5)enter queries without ';'	
